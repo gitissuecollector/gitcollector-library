@@ -4,9 +4,9 @@ function GitCollector(params) {
     this.username = params.username;
     this.repository = params.repository;
     this.color = _.isUndefined(params.color) ? '000000' : params.color;
-    this.textColor = _.isUndefined(params.textColor) ? '000000' : params.textColor;
+    this.textColor = _.isUndefined(params.textColor) ? 'ffffff' : params.textColor;
 
-    this.src = "gitcollector.com/" + [this.username, this.repository, this.color/*, this.textColor*/].join('/');
+    this.src = "gitcollector.com/" + [this.username, this.repository, this.color, this.textColor].join('/');
 
     this.init();
 }
