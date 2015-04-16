@@ -13,7 +13,7 @@ module.exports = function (grunt) {
                     },
                     templateSettings: {
                         variable: 'data',
-                        interpolate : /\{\{(.+?)\}\}/g
+                        interpolate: /\{\{(.+?)\}\}/g
                     }
                 },
                 files: {
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['www/lib/*.js', 'www/app/*.js'],
+                src: ['www/lib/*.js', 'www/app/templates.js', 'www/app/main.js'],
                 dest: 'www-built/GitCollector.js'
             }
         },

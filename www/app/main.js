@@ -1,10 +1,10 @@
-function GitCollector(username, repository, color, textcolor) {
+function GitCollector(params) {
     this.loaded = false;
     this.templates = window.gcTemplates;
-    this.username = username;
-    this.repository = repository;
-    this.color = color;
-    this.textColor = textcolor;
+    this.username = params.username;
+    this.repository = params.repository;
+    this.color = _.isUndefined(params.color) ? '000000' : params.color;
+    this.textColor = _.isUndefined(params.textColor) ? '000000' : params.textColor;
 
     this.src = "gitcollector.com/" + [this.username, this.repository, this.color/*, this.textColor*/].join('/');
 
@@ -50,3 +50,7 @@ GitCollector.prototype.init = function () {
         console.error(error);
     }
 };
+
+if (!_.isUndefined(window.gcAsyncInit())) {
+    window.gcAsyncInit();
+}
