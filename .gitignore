@@ -2,3 +2,4 @@ www-built/*
 npm-debug.log
 node_modules/*
 .idea/*
+www/app/templates.js
