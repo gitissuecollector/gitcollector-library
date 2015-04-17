@@ -1,10 +1,11 @@
 function GitCollector(params) {
-    this.loaded = false;
-    this.templates = window.gcTemplates;
-    this.username = params.username;
+    this.loaded     = false;
+    this.templates  = window.gcTemplates;
+    this.username   = params.username;
     this.repository = params.repository;
-    this.color = _.isUndefined(params.color) ? '000000' : params.color;
-    this.textColor = _.isUndefined(params.textColor) ? 'ffffff' : params.textColor;
+    this.color      = _.isUndefined(params.color) ? '000000' : params.color;
+    this.textColor  = _.isUndefined(params.textColor) ? 'ffffff' : params.textColor;
+    this.text       = _.isUndefined(params.text) ? 'Feedback' : params.text;
 
     this.src = "gitcollector.com/" + [this.username, this.repository, this.color, this.textColor].join('/');
 
