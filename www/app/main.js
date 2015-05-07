@@ -29,8 +29,7 @@ GitCollector.prototype.init = function () {
     var self = this;
 
     try {
-        var html = self.templates['feedback.html'](self);
-        document.body.innerHTML += html;
+        document.body.innerHTML += self.templates['feedback.html'](self);
 
         document.getElementById('gc-feedback').addEventListener('click', function () {
             self.toggle();
@@ -47,7 +46,6 @@ GitCollector.prototype.init = function () {
 
         self.loaded = true;
     } catch (error) {
-        self.loaded = false;
         console.error(error);
     }
 };
