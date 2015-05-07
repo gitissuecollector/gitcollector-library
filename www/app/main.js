@@ -13,7 +13,7 @@ function GitCollector(params) {
 }
 
 GitCollector.prototype.toggle = function () {
-    var $overlay = gcHelper.getElementsByClassName('gc-overlay')[0];
+    var $overlay   = gcHelper.getElementsByClassName('gc-overlay')[0];
     var $container = gcHelper.getElementsByClassName('gc-container')[0];
 
     if ($overlay.classList.contains("gc-hidden") && $container.classList.contains("gc-hidden")) {
@@ -29,7 +29,7 @@ GitCollector.prototype.init = function () {
     var self = this;
 
     try {
-        var html = this.templates['feedback.html'](this);
+        var html = self.templates['feedback.html'](self);
         document.body.innerHTML += html;
 
         document.getElementById('gc-feedback').addEventListener('click', function () {
@@ -45,9 +45,9 @@ GitCollector.prototype.init = function () {
             return false;
         });
 
-        this.loaded = true;
+        self.loaded = true;
     } catch (error) {
-        this.loaded = false;
+        self.loaded = false;
         console.error(error);
     }
 };
