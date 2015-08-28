@@ -18,9 +18,9 @@ Open with your browser the index.html file and see if it works
 <script type="text/javascript">
         window.gcAsyncInit = function () {
             window.gcWidget = new GitCollector({
-                username  : 'juansanzone',
+                username  : 'myUsername',
                 repository: 'github-php-client',
-                text      : 'textito'
+                text      : 'Give me feedback'
             });
         };
 
